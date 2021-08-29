@@ -1,0 +1,72 @@
+.contact-us-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3%;
+
+    h2 {
+        width: 100%;
+        font-size: 26px;
+        margin: 1% 2%;
+    }
+
+    .contact-content {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+        }
+
+        .content-left {
+            width: 100%;
+            
+            @media screen and (min-width: 901px) {
+                padding: 2%;
+            }
+
+            h3 {
+                font-size: 22px;
+                color: #333333;
+            }
+
+            .side-by-side {
+                display: flex;
+                justify-content: space-between;
+
+                .title {
+                    color: #333333;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+
+                p, a {
+                    width: 40%;
+                    font-size: 16px;
+                    color: #5d5e5e;
+                }
+            }
+
+            hr {
+                height: 1px;
+                color: #cecece;
+                background-color: #cecece;
+                border: none;
+            }
+        }
+
+        .content-right {
+            width: 100%;
+
+            @media screen and (min-width: 901px) {
+                padding: 2%;
+            }
+
+            iframe {
+                @media screen and (max-width: 900px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3% 1%;
+
+    .search-heading {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            display: flex;
+            text-transform: capitalize;
+            margin: 0 7%;
+            font-size: 24px;
+            width: 100%;
+            margin: 0 25px;
+        }
+
+        p {
+            display: flex;
+            font-size: 14px;
+            margin: 0 7%;
+            width: 100%;
+            margin: 0 25px;
+        }
+    }
+
+    .history {
+        font-size: 16px;
+        margin: 0 7% 1%;
+
+        a {
+            color: #000;
+        }
+    }
+
+    .spinner {
+        margin: 0 auto;
+    }
+
+    .tiles-contaner {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media screen and (min-width: 901px) {
+            padding-left: 6%;
+        }
+
+        .category-tile {
+            display: flex;
+            flex-direction: column;
+            // border: 1px solid #000;
+            // text-align: center;
+            border-radius: 7px;
+            // box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.15);
+            margin: 1%;
+            justify-content: space-around;
+            
+            @media screen and (min-width: 901px) {
+                width: 21.2%;
+            }
+
+            @media screen and (max-width: 900px) {
+                width: 100%;
+            }
+
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                cursor: pointer;
+            }
+
+            h5 {
+                margin: 10px 0;
+                font-size: 17px;
+                color: #000;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 14px;
+                color: #5d5e5e;
+            }
+
+            .view-more {
+                display: flex;
+                justify-content: flex-start;
+                // background-color: #000;
+                color: #000;
+                // padding: 5%;
+                
+                a {
+                    cursor: pointer;
+                    color: #000;
+                    text-decoration: none;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.project-portfolio-container {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+
+    h2 {
+        width: 100%;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    a {
+        width: 100%;
+        color: #000;
+    } 
+
+    .portfolio-images {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 25px;
+
+        img {
+            margin-right: 30px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            object-fit: cover;
+            height: 300px;
+
+            @media screen and (min-width: 901px) {
+                width: 22%;
+            }
+        
+            @media screen and (max-width: 900px) {
+                width: 100%;
+            }
+        }
+    }
+}

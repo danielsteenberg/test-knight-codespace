@@ -1,0 +1,31 @@
+<div class="new-arrivals-container">
+  <div class="new-arrivals-header">
+      <div class="quality-text">
+        <h1>{{newArrivalHeading.heading}}</h1>
+        <h2 *ngIf="newArrivalHeading.paragraph_1">
+          {{newArrivalHeading.paragraph_1}}
+        </h2>
+        <p *ngIf="newArrivalHeading.paragraph_2">
+          {{newArrivalHeading.paragraph_2}}
+        </p>
+        <p *ngIf="newArrivalHeading.paragraph_3">
+          {{newArrivalHeading.paragraph_3}}
+        </p>
+      </div>
+      <img src="assets/{{newArrivalHeading.image}}" alt="{{newArrivalHeading.image}}">
+  </div>
+
+  <span class="category-heading">NEW ARRIVALS</span>
+  <span class="history"><a routerLink="/products">Products</a> // NEW ARRIVALS</span>
+
+  <div class="tiles-contaner">
+    <div class="arrivals-tile" *ngFor="let arrivals of arrivalsArray" routerLink="/products/details/item/{{arrivals.cat_description.split(' ').join('-')}}" (click)="setProduct(arrivals)">
+      <img src="assets/products/{{arrivals.cat_image}}" alt="{{arrivals.cat_image}}">
+      <h5>{{arrivals.cat_name}}</h5>
+      <p>{{arrivals.cat_description}}</p>
+      <div class="view-more">
+        <a routerLink="/products/details/item/{{arrivals.cat_description.split(' ').join('-')}}" (click)="setProduct(arrivals)">VIEW MORE...</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="new-arrivals-container">
+    <div class="new-arrivals-header">
+        <div class="quality-text">
+          <h2>{{whereToBuyHeading.heading}}</h2>
+        <p *ngIf="whereToBuyHeading.paragraph_1">
+          {{whereToBuyHeading.paragraph_1}}
+        </p>
+        <p *ngIf="whereToBuyHeading.paragraph_2">
+          {{whereToBuyHeading.paragraph_2}}
+        </p>
+        <p *ngIf="whereToBuyHeading.paragraph_3">
+          {{whereToBuyHeading.paragraph_3}}
+        </p>
+        </div>
+        <img src="assets/{{whereToBuyHeading.image}}" alt="{{whereToBuyHeading.image}}">
+    </div>
+
+    <div class="search-region-container">
+      <div class="search-box-container">
+          <select id="blogcategory" name="blogcategory" style="border:1px solid #cecece; height:30px;" [(ngModel)]="selectedRegionDropDown" (change)="onRegionSelect(selectedRegionDropDown)">
+            <option value="Please Select a Region">Please Select a Region</option>    
+            <option *ngFor="let region of regions" value="{{region}}" name="regions">{{region}}</option>
+          </select>
+          <select id="blogcategory" name="blogcategory" style="border:1px solid #cecece; height:30px;" [(ngModel)]="selectedSuburbDropDown" (change)="onSuburbSelect(selectedSuburbDropDown)" *ngIf="isRegionSelected">
+            <option value="Please Select a Suburb">Please Select a Suburb</option>    
+            <option *ngFor="let suburb of suburbs" value="{{suburb}}" name="suburb">{{suburb}}</option>
+          </select>
+      </div>
+      <br>
+      <p *ngIf="!isSuburbSelected">Please select a region and suburb to view retailers in your area</p>
+      <h3 *ngIf="isSuburbSelected">Retailers</h3>
+      <div class="list-of-retialers">
+        <div class="arrivals-tile" *ngFor="let retailers of retailersArray">
+          <div *ngIf="retailers.showRetailers == 'true' ? true : false">
+            <h4>{{retailers.title}}</h4>
+            <div class="view-more">
+              <span class="title">Telephone</span>
+              <span class="description">{{retailers.telephone}}</span>
+              <span class="title">E-mail Address:</span>
+              <span class="description">{{retailers.emailAddresses}}</span>
+              <span class="title">Address:</span>
+              <span class="description">{{retailers.address}}</span>
+              <a *ngIf="retailers.map_link" href="{{retailers.map_link}}" target="_blank" class="link">View Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

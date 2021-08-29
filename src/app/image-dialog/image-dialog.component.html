@@ -1,0 +1,11 @@
+<div class="dialog-container">
+    <img class="closeBtn" src="assets/closeBtn.png" alt="Close Icon" (click)="closeDialog()">
+    <img class="previewImage" src="{{data.image[imagePosition]}}" alt="Preview Image">
+    <p *ngIf="setItemDescription">{{itemDescription}}</p>
+    <i class="material-icons navigate-icon right" *ngIf="arrayLength > 1" (click)="next()">
+        navigate_next
+    </i>
+    <i class="material-icons navigate-icon left" *ngIf="arrayLength > 1" (click)="previous()">
+        navigate_before
+    </i>
+</div>

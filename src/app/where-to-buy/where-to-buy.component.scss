@@ -1,0 +1,143 @@
+.new-arrivals-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+
+    h2 {
+        width: 100%;
+        color: #333;
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+
+    .new-arrivals-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 3%;
+
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+        }
+
+        .quality-text {
+            @media screen and (min-width: 901px) {
+                width: 50%;
+            }
+    
+            @media screen and (max-width: 900px) {
+                width: 100%;
+            }
+        }
+
+        .new-arrivals-text {
+            padding: 0 2%;
+
+            @media screen and (min-width: 901px) {
+                width: 50%;
+            }
+    
+            @media screen and (max-width: 900px) {
+                width: 100%;
+            }
+        }
+
+        img {
+            display: block;
+            height: auto;
+            max-height: 420px;
+
+            @media screen and (min-width: 901px) {
+                width: 50%;
+            }
+    
+            @media screen and (max-width: 900px) {
+                width: 100%;
+            }
+        }
+    }
+
+    .search-region-container {
+        display: flex;
+        // justify-content: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding: 0 50px;
+
+        h2, h3 {
+            width: 100%;
+            font-size: 30px;
+            margin: 30px 0px 15px 0px;;
+        }
+
+        .search-box-container {
+            width: 100%;
+            display: flex;
+            // justify-content: center;
+
+            .search-field {
+                width: 70%;
+            }
+        }
+
+        .list-of-retialers {
+            display: flex;
+            flex-wrap: wrap;
+
+            h4 {
+                font-size: 18px;
+                margin-bottom: 0;
+            }
+
+            .arrivals-tile {
+                display: flex;
+                flex-direction: column;
+                margin: 1%;
+                justify-content: space-around;
+                overflow: hidden;
+
+                @media screen and (min-width: 901px) {
+                    width: 22.2%;
+                }
+        
+                @media screen and (max-width: 900px) {
+                    width: 100%;
+                }
+        
+                img {
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                }
+        
+                .view-more {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px 0;
+
+                    .title {
+                        font-weight: bold;
+                        margin-top: 10px;
+                    }
+
+                    .link {
+                        cursor: pointer;
+                        color: #000;
+                        margin-top: 20px;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+
+                    .link:hover {
+                        text-decoration: underline;
+                    }
+                    
+                    a {
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

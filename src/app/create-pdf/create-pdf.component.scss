@@ -1,0 +1,64 @@
+.pdf-container {
+
+    padding: 65px;
+
+    .logo {
+        width: 20%;
+    }
+
+    h1 {
+        font-weight: bold;
+        color: #000;
+        font-size: 24px;
+        margin: 25px 0;
+    }
+
+    .product-container {
+        display: flex;
+        justify-content: space-between;
+    
+        .image {
+            width: 48%;
+            
+            img {
+                width: 100%;
+            }
+        }
+    
+        .details {
+            width: 48%;
+    
+            p {
+                font-size: 22px;
+            } 
+
+            .title {
+                font-weight: bold;
+                color: #000;
+                font-size: 24px;
+            }
+        }
+    }
+
+    .contact {
+        margin: 25px auto;
+
+        .address {
+            h3 {
+                font-weight: bold;
+                color: #000;
+                font-size: 24px;
+                margin: 25px 0;
+            }
+
+            p {
+                font-size: 22px;
+            }
+        }
+
+        .email {
+            font-size: 22px;
+            margin-top: 25px;
+        }
+    }
+}

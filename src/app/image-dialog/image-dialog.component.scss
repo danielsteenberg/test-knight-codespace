@@ -1,0 +1,46 @@
+.dialog-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .closeBtn {
+        position: absolute;
+        right: -33px;
+        top: -25px;
+        cursor: pointer;
+    }
+
+    .navigate-icon {
+        cursor: pointer;
+        z-index: 1;
+        background-color: #000;
+        color: #fff;
+        border-radius: 50%;
+        border: 2px solid #fff;
+    }
+
+    .right {
+        position: absolute;
+        right: -20px;
+        top: 45%;
+    }
+
+    .left {
+        position: absolute;
+        left: -20px;
+        top: 45%;
+    }
+    
+    .previewImage {
+        height: 100%;
+
+        @media only screen and (min-width: 901px){
+            width: auto;
+        }
+
+        @media only screen and (max-width: 900px){
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}

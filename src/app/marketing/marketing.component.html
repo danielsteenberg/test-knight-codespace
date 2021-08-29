@@ -1,0 +1,78 @@
+<div class="new-arrivals-container">
+    <div class="new-arrivals-header">
+        <div class="quality-text">
+          <h2>{{marketingHeading.heading}}</h2>
+          <p *ngIf="marketingHeading.paragraph_1">
+            {{marketingHeading.paragraph_1}}
+          </p>
+          <p *ngIf="marketingHeading.paragraph_2">
+            {{marketingHeading.paragraph_2}}
+          </p>
+          <p *ngIf="marketingHeading.paragraph_3">
+            {{marketingHeading.paragraph_3}}
+          </p>
+        </div>
+        <img src="https://klight.co.za/assets/{{marketingHeading.image}}" alt="{{marketingHeading.image}}">
+    </div>
+  
+    <h2>OUR LATEST ADVERTS</h2>
+  
+    <pagination-template class="pager" #p="paginationApi"
+                     (pageChange)="pageChanged($event)">
+ 
+        <div class="pagination-previous" *ngIf="!p.isFirstPage()">
+            <a *ngIf="!p.isFirstPage()" (click)="goToFirst(p)" class="indecators"> << </a>
+        </div>
+ 
+        <div *ngFor="let page of p.pages; let i = index" [class.current]="p.getCurrent() === page.value">
+            <a (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value">
+                <span>{{ page.label }}</span>
+            </a>
+            <a *ngIf="p.getCurrent() === page.value">
+                <span>{{ page.label }}</span>
+            </a>
+        </div>
+ 
+        <div class="pagination-next" *ngIf="!p.isLastPage()">
+            <a *ngIf="!p.isLastPage()" (click)="goToLast(p)" class="indecators"> >> </a>
+        </div>
+    
+</pagination-template>
+    
+    <div class="tiles-contaner">
+      <div class="arrivals-tile" *ngFor="let arrivals of arrivalsArray | paginate: config">
+        <div class="image-container">
+          <img src="https://klight.co.za/assets/marketing/{{arrivals.cat_image}}" alt="{{arrivals.cat_image}}" (click)="openImage(['assets/marketing/' + arrivals.cat_image])">
+        </div>
+        <h5>{{arrivals.cat_name}}</h5>
+        <div class="view-more">
+          <ul>
+            <li [innerHTML]="arrivals.cat_description"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <pagination-template class="pager" #p="paginationApi"
+                     (pageChange)="pageChanged($event)">
+ 
+        <div class="pagination-previous" *ngIf="!p.isFirstPage()">
+            <a *ngIf="!p.isFirstPage()" (click)="goToFirst(p); scrollToTop()" class="indecators"> << </a>
+        </div>
+ 
+        <div *ngFor="let page of p.pages; let i = index" [class.current]="p.getCurrent() === page.value">
+            <a (click)="p.setCurrent(page.value); scrollToTop()" *ngIf="p.getCurrent() !== page.value">
+                <span>{{ page.label }}</span>
+            </a>
+            <a *ngIf="p.getCurrent() === page.value">
+                <span>{{ page.label }}</span>
+            </a>
+        </div>
+ 
+        <div class="pagination-next" *ngIf="!p.isLastPage()">
+            <a *ngIf="!p.isLastPage()" (click)="goToLast(p); scrollToTop()" class="indecators"> >> </a>
+        </div>
+    
+</pagination-template>
+  </div>
+  

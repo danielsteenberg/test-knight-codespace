@@ -1,0 +1,88 @@
+<div class="pdf-container">
+  <img class="logo" src="assets/logo.svg" alt="klight logo">
+  <h1>{{categoryObject.cat_name}}</h1>
+  <div class="product-container">
+    <div class="image">
+      <img src="assets/products/{{categoryObject.cat_image}}" alt="{{categoryObject.cat_image}}">
+    </div>
+    <div class="details">
+      <p class="title">
+          PRODUCT CODE
+      </p>
+      <p>
+          {{categoryObject.cat_name}}
+      </p>
+      <p class="title">
+          PRODUCT NAME
+      </p>
+      <p>
+          {{categoryObject.cat_description}}
+      </p>
+      <p class="title" *ngIf="categoryObject.colour">
+          {{categoryObject.colour_display_name}}
+      </p>
+      <p *ngIf="categoryObject.colour">
+          {{categoryObject.colour}}
+      </p>
+      <p class="title" *ngIf="categoryObject.fittingColour">
+          {{categoryObject.fittingColour_display_name}}
+      </p>
+      <p *ngIf="categoryObject.fittingColour">
+          {{categoryObject.fittingColour}}
+      </p>
+      <p class="title" *ngIf="categoryObject.crystalColour">
+          {{categoryObject.crystalColour_display_name}}
+      </p>
+      <p *ngIf="categoryObject.crystalColour">
+          {{categoryObject.crystalColour}}
+      </p>
+      <p class="title" *ngIf="categoryObject.measurements">
+          {{categoryObject.measurements_display_name}}
+      </p>
+      <p *ngIf="categoryObject.measurements">
+          {{categoryObject.measurements}}
+      </p>
+      <p class="title" *ngIf="categoryObject.lamps">
+          {{categoryObject.lamps_display_name}}
+      </p>
+      <p *ngIf="categoryObject.lamps">
+          {{categoryObject.lamps}}
+      </p>
+      <p class="title" *ngIf="categoryObject.wattage">
+          {{categoryObject.wattage_display_name}}
+      </p>
+      <p *ngIf="categoryObject.wattage">
+          {{categoryObject.wattage}}
+      </p>
+      <p class="title" *ngIf="categoryObject.iprating">
+          {{categoryObject.iprating_display_name}}
+      </p>
+      <p *ngIf="categoryObject.iprating">
+          {{categoryObject.iprating}}
+      </p>
+    </div>
+  </div>
+
+  <div class="contact">
+    <div class="address">
+      <h3>Cape Town</h3>
+      <p>7 Kunene Circle, Omuramba Business Park,</p>
+      <p>Milnerton 7441, PO Box 50296, Waterfront 8002</p>
+      <p>Tel: (021) 552 4370</p>
+      <p>Fax: (021) 552 4349</p>
+    </div>
+
+    <div class="address">
+      <h3>Johannesburg - Midrand</h3>
+      <p>Unit 8 & 9 The Arena</p>
+      <p>Captial Hill Business Park</p>
+      <p>Cnr Le Roux & K101 Halfway House</p>
+      <p>Tel: (011) 312 1247</p>
+      <p>Fax: (011) 312 9214</p>
+    </div>
+
+    <div class="email">
+        e-mail: <a href="mailto:info@klight.co.za">info@klight.co.za</a> | web: <a href="www.klight.co.za">www.klight.co.za</a>
+    </div>
+  </div>
+</div>

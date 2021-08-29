@@ -1,0 +1,98 @@
+<div class="contact-us-container">
+  <i class="material-icons" (click)="closeDialog()">
+    close
+  </i>
+  <div class="contact-content">
+    <div class="content-right">
+      <img src="assets/products/{{categoryObject.cat_image}}" alt="{{categoryObject.cat_image}}" frameborder="0" style="border:0">
+      <div class="additional-images">
+        <img *ngIf="categoryObject.image2" src="assets/products/{{categoryObject.image2}}" alt="{{categoryObject.image2}}">
+        <img *ngIf="categoryObject.image3" src="assets/products/{{categoryObject.image3}}" alt="{{categoryObject.image3}}">
+        <img *ngIf="categoryObject.image4" src="assets/products/{{categoryObject.image4}}" alt="{{categoryObject.image4}}">
+      </div>
+    </div>
+    <div class="content-left">
+       
+        <hr *ngIf="categoryObject.cat_name">
+        <div class="side-by-side" *ngIf="categoryObject.cat_name">
+            <p class="heading product">Product Code:</p>
+            <p class="heading-description">{{categoryObject.cat_name}}</p>
+            <p></p>
+        </div>
+  
+        <hr *ngIf="categoryObject.cat_description">
+        <div class="side-by-side" *ngIf="categoryObject.cat_description">
+            <p class="heading product">Product Name:</p>
+            <p class="heading-description">{{categoryObject.cat_description}}</p>
+            <p></p>
+        </div>
+
+        <hr *ngIf="categoryObject.colour">
+        <div class="side-by-side" *ngIf="categoryObject.colour">
+            <p class="heading">{{categoryObject.colour_display_name}}:</p>
+            <p class="heading-description">{{categoryObject.colour}}</p>
+            <p></p>
+        </div>
+
+        <hr *ngIf="categoryObject.fittingColour">
+        <div class="side-by-side" *ngIf="categoryObject.fittingColour">
+            <p class="heading">{{categoryObject.fittingColour_display_name}}:</p>
+            <p class="heading-description">{{categoryObject.fittingColour}}</p>
+            <p></p>
+        </div>
+
+        <hr *ngIf="categoryObject.crystalColour">
+         <div class="side-by-side" *ngIf="categoryObject.crystalColour">
+            <p class="heading">{{categoryObject.crystalColour_display_name}}:</p>
+            <p class="heading-description">{{categoryObject.crystalColour}}</p>
+            <p></p>
+        </div>
+
+        <hr *ngIf="categoryObject.measurements">
+        <div class="side-by-side" *ngIf="categoryObject.measurements">
+            <p class="heading">{{categoryObject.measurements_display_name}}:</p>
+            <p class="heading-description">
+              <span *ngFor="let measurment of measurmentsArray">{{measurment}}<br></span>
+            </p>
+            <p></p>
+        </div>
+
+        <hr *ngIf="categoryObject.lamps">
+        <div class="side-by-side" *ngIf="categoryObject.lamps">
+            <p class="heading">{{categoryObject.lamps_display_name}}:</p>
+            <p class="heading-description">{{categoryObject.lamps}}</p>
+            <p></p>
+        </div>
+
+        <hr *ngIf="categoryObject.wattage">
+        <div class="side-by-side" *ngIf="categoryObject.wattage">
+            <p class="heading">{{categoryObject.wattage_display_name}}:</p>
+            <p class="heading-description">{{categoryObject.wattage}}</p>
+            <p></p>
+        </div>
+
+        <hr *ngIf="categoryObject.iprating">
+        <div class="side-by-side" *ngIf="categoryObject.iprating">
+            <p class="heading">{{categoryObject.iprating_display_name}}:</p>
+            <p class="heading-description">{{categoryObject.iprating}}</p>
+            <p></p>
+        </div>
+       
+        <hr>
+        <div class="social-media">
+          <img src="https://klight.co.za/klightOld/images/pdf.svg" alt="Pdf Icon" class="social" (click)="captureScreen()">
+          <a [href]="'http://www.facebook.com/sharer.php?u=' + routerUrl" target="_blank">
+            <img src="assets/social/facebook-share.svg" alt="Facebook Icon" class="social">
+          </a>
+          <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+            <img src="assets/social/pinterest-share.svg" alt="Pintrest Icon" class="social">
+          </a>
+          <a href="mailto:?Subject={{productName}}%20from K. Light Import&amp;Body=Hi,%0D%0A%0D%0ATake a look at this product by K. Light Import%20{{'https://klight.co.za/products/details/item/' + routerName}}">
+            <img src="assets/social/email-share.svg" alt="Email Icon" class="social">
+          </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+<app-create-pdf id="contentToConvert" *ngIf="showPdfContent"></app-create-pdf>

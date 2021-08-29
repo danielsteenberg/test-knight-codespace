@@ -1,0 +1,68 @@
+.home-container {
+    display: flex;
+    margin: 0 auto;
+
+    @media screen and (max-width: 900px) {
+        width: 100%;
+        padding: 2%;
+        flex-direction: column;
+    }
+
+    @media screen and (min-width: 901px) {
+        width: 82%;
+    }
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        border-radius: 7px;
+        overflow: hidden;
+        box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        cursor: pointer;
+
+        @media screen and (min-width: 901px) {
+            width: 33.33333333%;
+        }
+
+        img { 
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                max-height: 280px;
+            }
+
+            @media screen and (max-width: 900px) {
+                height: auto;
+            }
+        }
+
+        .caption {
+            padding: 10px 10px 10px 15px;
+            background: #000;
+            color: #fff;
+            letter-spacing: 2px;
+            font-size: 18px;
+        }
+    }
+}
+
+::ng-deep .carousel-slide .carousel-slide {
+    background-position: inherit !important;
+}
+
+::ng-deep .mat-button-wrapper mat-icon {
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

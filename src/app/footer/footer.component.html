@@ -1,0 +1,70 @@
+<div class="footer-container">
+  <div class="content-left">
+      <h3>QUICK LINKS</h3>
+      <div class="categories">
+        <div class="list-of-categories">
+          <a *ngFor="let category of categories" (click)="setCategory(category.cat_id, category.cat_name)">{{category.cat_name}}</a>
+        </div>
+        <!-- <div class="list-of-categories">
+            <a >CRYSTAL CHANDELIERS</a>
+            <a (click)="setCategory(2, '/products/category/chandeliers-and-pendants')">CHANDELIERS AND PENDANTS</a>
+            <a (click)="setCategory(4, '/products/category/led-pendants-and-wall-lights')">LED PENDANTS AND WALL LIGHTS</a>
+            <a (click)="setCategory(8, '/products/category/acrylic-light-fittings')">ACRYLIC LIGHT FITTINGS</a>
+        </div>
+        <div class="list-of-categories">
+            <a (click)="setCategory(5, '/products/category/metal-pendants')">METAL PENDANTS</a>
+            <a (click)="setCategory(7, '/products/category/glass-pendants')">GLASS PENDANTS</a>
+            <a (click)="setCategory(15, '/products/category/decorative-bulbs-and-led-bulbs')">DECORATIVE AND LED BULBS</a>
+            <a (click)="setCategory(11, '/products/category/wall-lights')">WALL LIGHTS</a>
+        </div>
+        <div class="list-of-categories">
+            <a (click)="setCategory(12, '/products/category/bathroom-and-mirror-lights')">BATHROOM AND MIRROR LIGHTS</a>
+            <a (click)="setCategory(28, '/products/category/garden-and-outdoor-lights')">GARDEN AND OUTDOOR LIGHTS</a>
+            <a (click)="setCategory(27, '/products/category/led-garden-and-outdoor-lights')">LED GARDEN AND OUTDOOR LIGHTS</a>
+            <a (click)="setCategory(22, '/products/category/led-recessed-down-lights-and-drivers')">LED RECESSED DOWNLIGHTS AND DRIVERS</a>
+        </div> -->
+      </div>
+      <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+      <div class="subscribe-form">
+        <input type="email" placeholder="Enter Your Email" [(ngModel)]='email'>
+        <button (click)="subscribeMe()">Click to Subscribe</button>
+      </div>
+  </div>
+  
+  <div class="content-right">
+    <!-- <img class="quality" src="assets/quality.png" > -->
+    <h2>QUICK LINKS</h2>
+    <div class="contact">
+      <div class="contact-item">
+        <span class="material-icons">
+          <img src="assets/social/facebook.svg" alt="facebook logo">
+        </span>
+        <a href="https://www.facebook.com/klight.co.za/" target="_blank">Like us on Facebook</a>
+      </div>
+      <div class="contact-item">
+        <i class="material-icons">
+          phone
+        </i>
+        <span>Cape Town: +27 021 552 4370</span>
+      </div>
+      <div class="contact-item">
+        <i class="material-icons">
+          phone
+        </i>
+        <span>Johannesburg: +27 011 312 1247</span>
+      </div>
+      <div class="contact-item">
+        <i class="material-icons">
+          mail_outline
+        </i>
+        <a href="mailto:info@klight.co.za?subject=&body=">info@klight.co.za</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer-rights">
+  <span>Copyright © 2015 K. Light Import - All rights reserved </span> <span class="seperator">|</span>
+  <a href="assets/footerTerms/Website_Disclaimer_and_Terms_of_Use_Klight_5th_November_2013.pdf" target="_blank">Terms & Conditions </a> <span class="seperator">|</span>
+  <a href="assets/footerTerms/Privacy_Policy_Klight_5th_November_2013.pdf" target="_blank">Privacy Policy </a> <span class="seperator">|</span>
+  <a href="assets/footerTerms/Klight_Proatia_Manual.pdf" target="_blank">Proatia Manual</a>
+</div>

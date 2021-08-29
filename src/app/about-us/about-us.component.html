@@ -1,0 +1,43 @@
+<div class="about-us-container">
+  <div class="service-and-quality-content">
+    <div class="quality-text">
+      <h2>{{aboutUsHeading.heading}}</h2>
+      <p *ngIf="aboutUsHeading.paragraph_1">
+        {{aboutUsHeading.paragraph_1}}
+      </p>
+      <p *ngIf="aboutUsHeading.paragraph_2">
+        {{aboutUsHeading.paragraph_2}}
+      </p>
+      <p *ngIf="aboutUsHeading.paragraph_3">
+        {{aboutUsHeading.paragraph_3}}
+      </p>
+    </div>
+    <img src="assets/{{aboutUsHeading.image}}" alt="{{aboutUsHeading.image}}">
+  </div>
+  <div class="about-us-content">
+    <div class="about-us-text">
+      <h2>ABOUT US</h2>
+      <p>
+        K. Light Import first opened its doors in Cape Town in 1995, with the goal of introducing the latest models of beautiful, exclusive, quality light fittings to the South African Decorating industry.
+      </p>
+      <p>
+        Our growing range of imported light fittings represent the most unique and stylish products available globally, catering to a wide spectrum of lighting enthusiasts.
+      </p>
+      <p>
+        Through supplying quality service over the years, we have established both friendly and continued relationships with our customers, enabling us to open our up-market Johannesburg Showroom in the beginning of 2008.
+      </p>
+      <p>
+        In 2011, with the same outstanding customer support, we opened a new bigger more beautiful Johannesburg showroom with warehouse. This makes our products more easily accessible to a wider audience, both nationally and throughout Africa.
+      </p>
+      <p>
+        For this valued support we would like to THANK all our customers, acknowledging the significant relationships we have built through the years.
+      </p>
+      <p>
+        We are happy to announce that most of our fittings complies to the new SANS Standards (IEC 60598-2-1 and IEC 60950-1:2010). By the end of this ongoing project ALL our fittings will comply. We trust this will benefit, you, our customers.
+      </p>
+    </div>
+    <iframe style="margin-top:15px;" width="100%" height="315px" src="https://www.youtube.com/embed/n2xT4Jf0Y6Y" frameborder="0" allowfullscreen=""></iframe>
+  </div>
+</div>
+
+<app-category-carousel></app-category-carousel>

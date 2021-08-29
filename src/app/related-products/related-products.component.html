@@ -1,0 +1,20 @@
+<div class="carousel-container"> 
+  <hr>
+  <h2>RELATED PRODUCTS</h2>
+
+  <img class="arrows" src="assets/carousel/prevowl.png" alt="Previous Arrow" (click)="slickModal.slickPrev()">
+  <img class="arrows" src="assets/carousel/nextowl.png" alt="Next Arrow" (click)="slickModal.slickNext()">
+
+  <ngx-slick-carousel class="carousel" 
+    #slickModal="slick-carousel" 
+    [config]="slideConfig" 
+    (init)="slickInit($event)"
+    (breakpoint)="breakpoint($event)"
+    (afterChange)="afterChange($event)"
+    (beforeChange)="beforeChange($event)">
+      <div ngxSlickItem *ngFor="let slide of productsArray" class="slide" (click)="openProduct(slide)">
+            <img src="assets/products/{{ slide.cat_image }}" alt="{{ slide.cat_image }}" width="100%">
+            <p class="slider-title">{{ slide.cat_description }}</p>
+      </div>
+  </ngx-slick-carousel>
+</div>

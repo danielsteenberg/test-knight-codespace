@@ -1,0 +1,39 @@
+<div class="new-arrivals-container">
+  <div class="new-arrivals-header">
+      <div class="quality-text">
+        <h2>{{projectsHeading.heading}}</h2>
+        <p *ngIf="projectsHeading.paragraph_1">
+          {{projectsHeading.paragraph_1}}
+        </p>
+        <p *ngIf="projectsHeading.paragraph_2">
+          {{projectsHeading.paragraph_2}}
+        </p>
+        <p *ngIf="projectsHeading.paragraph_3">
+          {{projectsHeading.paragraph_3}}
+        </p>
+      </div>
+      <img src="assets/{{projectsHeading.image}}" alt="{{projectsHeading.image}}">
+  </div>
+
+  <div class="tiles-contaner">
+    <div class="arrivals-tile" *ngFor="let arrivals of arrivalsArray">
+      <a class="title" routerLink="/projects/details/{{arrivals.cat_name.replace(' ','-')}}">{{arrivals.cat_name}}</a>
+      <a 
+        *ngIf="arrivals.email_link"
+        [href]="'mailto:' + arrivals.email_link">
+        {{arrivals.email_link_name}}
+      </a>
+      <a 
+        *ngIf="arrivals.website_link"
+        [href]="arrivals.website_link" 
+        target="_blank">
+        {{arrivals.website_link_name}}
+      </a>
+      <div class="view-more">
+        <span class="description">{{arrivals.cat_description}}</span>
+      </div>
+      <img src="assets/projects/{{arrivals.cat_image}}" alt="{{arrivals.cat_image}}" [matTooltip]="getPortfolioDescription(arrivals)">
+    </div>
+  </div>
+</div>
+  

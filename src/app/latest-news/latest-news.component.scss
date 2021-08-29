@@ -1,0 +1,127 @@
+.new-arrivals-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+    justify-content: center;
+
+    h2 {
+        width: 100%;
+        padding: 0 6%;
+        font-size: 25px;
+        color: #333;
+    }
+
+    p {
+        padding: 0 6%;
+        color: #5d5e5e;
+    }
+
+    .new-arrivals-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 3%;
+
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+        }
+
+        .quality-text {
+            @media screen and (min-width: 901px) {
+                width: 50%;
+            }
+    
+            @media screen and (max-width: 900px) {
+                width: 100%;
+            }
+        }
+
+        .new-arrivals-text {
+            padding: 0 2%;
+
+            @media screen and (min-width: 901px) {
+                width: 50%;
+            }
+    
+            @media screen and (max-width: 900px) {
+                width: 100%;
+            }
+        }
+
+        img {
+            display: block;
+            max-height: 415px;
+            object-fit: cover;
+
+            @media screen and (min-width: 901px) {
+                width: 50%;
+            }
+    
+            @media screen and (max-width: 900px) {
+                width: 100%;
+            }
+        }
+    }
+
+    .tiles-contaner {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media screen and (min-width: 901px) {
+            padding-left: 6%;
+        }
+
+        .arrivals-tile {
+            display: flex;
+            flex-direction: column;
+            border-radius: 7px;
+            margin: 1%;
+
+            @media screen and (min-width: 901px) {
+                width: 21.2%;
+            }
+
+            @media screen and (max-width: 900px) {
+                width: 100%;
+            }
+
+            .image-container {
+                max-height: 280px;
+                overflow: hidden;
+
+                a {
+                    cursor: pointer;
+                    display: flex;
+                    
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+
+            h5 {
+                font-size: 18px;
+                margin: 20px 0 10px;
+                font-weight: bold;
+            }
+
+            .view-more {
+                display: flex;
+                justify-content: center;
+                // background-color: #000;
+                color: #424242;
+                // padding: 5%;
+                
+                a {
+                    cursor: pointer;
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+                .description {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

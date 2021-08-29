@@ -1,0 +1,25 @@
+<div class="products-container">
+  <div class="search-heading">
+      <h1>Search Results</h1>
+      <p>Pages that match your search for '{{term}}'</p>
+      <!-- <span class="history"><a routerLink="/products/all">Products</a> // {{category | uppercase}}</span> -->  
+  </div>
+   
+    <div class="spinner" *ngIf="spinner">
+        <mat-spinner></mat-spinner>
+    </div>
+  
+    <div class="tiles-contaner">
+      <ng-container *ngFor="let category of categoryArray | filter:term">
+          <div class="category-tile" *ngIf="category.showProduct == 'true' ? true : false">
+            <img src="assets/products/{{category.cat_image}}" alt="{{category.cat_image}}" (click)="setProduct(category)" >
+            <h5>{{category.cat_name}}</h5>
+            <p>{{category.cat_description}}</p>
+            <div class="view-more">
+              <a (click)="setProduct(category)" >VIEW MORE...</a>
+            </div>
+          </div>  
+        </ng-container>
+    </div>
+  </div>
+  

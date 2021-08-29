@@ -1,0 +1,43 @@
+<mat-carousel
+  timings="250ms ease-in"
+  [autoplay]="true"
+  interval="5000"
+  color="#fff"
+  maxWidth="auto"
+  proportion="30"
+  slides="6"
+  [loop]="true"
+  [hideArrows]="false"
+  [hideIndicators]="false"
+  [useKeyboard]="true"
+  [useMouseWheel]="false"
+  orientation="ltr"
+  *ngIf="!platform.ANDROID && !platform.IOS"
+>
+  <mat-carousel-slide
+    #matCarouselSlide
+    *ngFor="let slide of slides; let i = index"
+    [image]="slide"
+    overlayColor="#00000040"
+    [hideOverlay]="true"
+  ></mat-carousel-slide>
+</mat-carousel>
+    
+<div class="home-container">
+  <div class="home-content" routerLink="/new-arrivals">
+      <img src="assets/home/arrival.jpg" alt="Arrival Image">
+      <div class="caption">NEW ARRIVALS</div>
+  </div>
+  
+  <div class="home-content" routerLink="/latest-news">
+      <img src="assets/home/news.jpg" alt="News Image">
+      <div class="caption">LATEST NEWS</div>
+  </div>
+  
+  <div class="home-content" routerLink="/marketing">
+      <img src="assets/home/advertising.jpg" alt="Marketing Image">
+      <div class="caption">MARKETING</div>
+  </div>
+</div>
+
+<app-category-carousel></app-category-carousel>

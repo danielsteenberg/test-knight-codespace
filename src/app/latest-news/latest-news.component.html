@@ -1,0 +1,32 @@
+<div class="new-arrivals-container">
+    <div class="new-arrivals-header">
+        <div class="quality-text">
+          <h2>{{latestNewsHeading.heading}}</h2>
+          <p *ngIf="latestNewsHeading.paragraph_1">
+            {{latestNewsHeading.paragraph_1}}
+          </p>
+          <p *ngIf="latestNewsHeading.paragraph_2">
+            {{latestNewsHeading.paragraph_2}}
+          </p>
+          <p *ngIf="latestNewsHeading.paragraph_3">
+            {{latestNewsHeading.paragraph_3}}
+          </p>
+        </div>
+        <img src="https://klight.co.za/assets/{{latestNewsHeading.image}}" alt="{{latestNewsHeading.image}}">
+    </div>
+  
+    <h2>OUR LATEST NEWS</h2>
+  
+    <div class="tiles-contaner">
+      <div class="arrivals-tile" *ngFor="let arrivals of arrivalsArray">
+        <div class="image-container">
+            <a (click)="setEnlargedImage('assets/latestNews/' + arrivals.cat_image)">
+              <img src="https://klight.co.za/assets/latestNews/{{arrivals.cat_image}}" alt="{{arrivals.cat_image}}">
+            </a>
+        </div>
+        <h5>{{arrivals.cat_name}}</h5>
+        <span>{{arrivals.cat_description}}</span>
+      </div>
+    </div>
+  </div>
+  

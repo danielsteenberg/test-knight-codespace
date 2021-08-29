@@ -1,0 +1,52 @@
+<div class="header-container">
+  <div class="header-top">
+    <img class="logo" routerLink="/" src="assets/logo.svg" alt="klight logo">
+    <div class="search-bar">
+      <input (keyup)="searchTerm()" [(ngModel)]="term">
+      <button>GO</button>
+    </div>
+  </div>  
+  <div class="header-bottom">
+    <div class="desktop" *ngIf="!platform.ANDROID && !platform.IOS">
+        <a routerLink="/">HOME</a>
+        <a routerLink="/about-us" routerLinkActive="active">ABOUT US</a>
+        <a routerLink="/products/all" routerLinkActive="active">PRODUCTS</a>
+        <a routerLink="/new-arrivals" routerLinkActive="active">NEW ARRIVALS</a>
+        <a routerLink="/marketing" routerLinkActive="active">MARKETING</a>
+        <a routerLink="/latest-news" routerLinkActive="active">LATEST NEWS</a>
+        <a routerLink="/projects" routerLinkActive="active">PROJECTS</a>
+        <a routerLink="/where-to-buy" routerLinkActive="active">WHERE TO BUY</a>
+        <a routerLink="/contact-us" routerLinkActive="active">CONTACT US</a>
+    </div>
+
+      <div class="mobile" *ngIf="platform.ANDROID || platform.IOS">
+        <!-- <button mat-raised-button color="primary" class="menu-btn" [matMenuTriggerFor]="menu">Menu</button> -->
+       <img src="assets/menu-toggle.png" alt="menu toggle icon" class="navbar-toggle" (click)="toggleMenu()">
+
+       <div class="menu-items" [style.display]="toggleMenuItems">
+          <a routerLink="/" (click)="closeMenu()">HOME</a>
+          <a routerLink="/about-us" (click)="closeMenu()">ABOUT US</a>
+          <a routerLink="/products/all" (click)="closeMenu()">PRODUCTS</a>
+          <a routerLink="/new-arrivals" (click)="closeMenu()">NEW ARRIVALS</a>
+          <a routerLink="/marketing" (click)="closeMenu()">MARKETING</a>
+          <a routerLink="/latest-news" (click)="closeMenu()">LATEST NEWS</a>
+          <a routerLink="/projects" (click)="closeMenu()">PROJECTS</a>
+          <a routerLink="/where-to-buy" (click)="closeMenu()">WHERE TO BUY</a>
+          <a routerLink="/contact-us" (click)="closeMenu()">CONTACT US</a>
+       </div>
+
+        <mat-menu #menu="matMenu" >
+          <button mat-menu-item routerLink="/" class="plMenuCSS">HOME</button>
+          <button mat-menu-item routerLink="/about-us">ABOUT US</button>
+          <button mat-menu-item routerLink="/products/all" >PRODUCTS</button>
+          <button mat-menu-item routerLink="/new-arrivals">NEW ARRIVALS</button>
+          <button mat-menu-item routerLink="/marketing">MARKETING</button>
+          <button mat-menu-item routerLink="/latest-news">LATEST NEWS</button>
+          <button mat-menu-item routerLink="/projects">PROJECTS</button>
+          <button mat-menu-item routerLink="/where-to-buy">WHERE TO BUY</button>
+          <button mat-menu-item routerLink="/contact-us">CONTACT US</button>
+        </mat-menu>
+      </div>
+  </div>
+</div>
+

@@ -1,0 +1,17 @@
+<div class="products-container">
+  <h1>All Categories</h1>
+
+  <div class="spinner" *ngIf="spinner">
+      <mat-spinner></mat-spinner>
+  </div>
+
+  <div class="tiles-contaner">
+    <div class="category-tile" *ngFor="let category of categoryArray">
+      <img src="https://klight.co.za/assets/categories/{{category.cat_image}}" alt="{{category.cat_image}}" (click)="setProductCategory(category.cat_id, category)">
+      <h5>{{category.cat_name}}</h5>
+      <div class="view-more">
+        <a (click)="setProductCategory(category.id, category)">VIEW MORE...</a>
+      </div>
+    </div>
+  </div>
+</div>

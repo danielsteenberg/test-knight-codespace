@@ -1,0 +1,32 @@
+export class ProductModel {
+    id: number;
+    cat_name: string;
+    cat_url_title: string;
+    cat_description: string;
+    cat_image: string;
+    cat_id: string;
+    colour: string;
+    colour_display_name: string;
+    measurements: string;
+    measurements_display_name: string;
+    lamps: string;
+    lamps_display_name: string;
+    wattage: string;
+    wattage_display_name: string;
+    iprating: string;
+    iprating_display_name: string;
+    showProduct: string;
+    newArrival: string;
+    fittingColour: string;
+    fittingColour_display_name: string;
+    crystalColour: string;
+    crystalColour_display_name: string;
+    portfolio?: string;
+    image2: string;
+    image3: string;
+    image4: string;
+    related_products: string;
+    portfolio_description?: string;
+    position_id: any;
+    newArrivalPositionId: number;
+}

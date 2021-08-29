@@ -1,0 +1,185 @@
+.footer-container {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+
+    @media screen and (min-width: 901px) {
+        padding: 20px 65px 10px;
+    }
+
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+        padding: 20px 20px 10px;
+    }
+
+    .content-left {
+        @media screen and (min-width: 901px) {
+            width: 70%;
+        }
+
+        @media screen and (max-width: 900px) {
+            width: 100%;
+        }
+
+        h3 {
+            font-size: 21px;
+        }
+
+        .categories {
+
+            .list-of-categories {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                font-size: 13px;
+                color: #5d5e5e;
+                margin: 8px 20px 40px 0;
+                padding: 0px;
+                cursor: pointer;
+                overflow: hidden;
+
+                @media screen and (min-width: 800px) {
+                    max-height: 315px;
+                }
+        
+                @media screen and (max-width: 799px) {
+                    height: auto;
+                }
+
+                a {
+                    width: 223px;
+                    margin: 2px;
+                    overflow-wrap: break-word;
+                }
+            }
+
+            .list-of-categories a:hover {
+                color: #fff;
+            }
+        }
+
+        .subscribe-form {
+            input {
+                float: left;
+                margin-right: 10px;
+                width: 188px;
+                border: none;
+                padding: 3px 10px 3px 10px;
+                display: block;
+                height: 34px;
+                font-size: 14px;
+                line-height: 1.42857143;
+                color: #555555;
+                background-color: #fff;
+                background-image: none;
+                border-radius: 4px;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+                -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            }
+
+            button {
+                margin-top: 0px;
+                float: left;
+                margin-bottom: 15px;
+                background: gray;
+                color: white;
+                width: 188px;
+                border: none;
+                cursor: pointer;
+                padding: 3px 10px 3px 10px;
+                display: inline-block;
+                font-weight: normal;
+                text-align: center;
+                vertical-align: middle;
+                touch-action: manipulation;
+                white-space: nowrap;
+                font-size: 14px;
+                line-height: 1.42857143;
+                border-radius: 4px;
+                user-select: none;
+                height: 34px;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+                transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            }
+        }
+    }
+
+    .content-right {
+        @media screen and (min-width: 901px) {
+            width: 30%;
+        }
+
+        @media screen and (max-width: 900px) {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 23px;
+        }
+
+        .quality {
+            margin: 15px 0;
+        }
+
+        .contact {
+            .contact-item {
+
+                a:hover {
+                    color: #fff;
+                }
+
+                .material-icons {
+                    margin-right: 12px;
+                    width: 20px;
+
+                    img {
+                        margin: 0px 12px 5px 0px;
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+a, span {
+    color: #5d5e5e;
+    text-decoration: none;
+}
+
+.footer-rights {
+    display: flex;
+    color: #5d5e5e;
+    background-color: #000;
+    align-items: center;
+    font-size: 12px;
+
+    @media screen and (min-width: 901px) {
+        padding: 0px 65px 20px;
+    }
+
+    @media screen and (max-width: 900px) {
+        padding: 0px 20px 20px;
+    }
+
+    a {
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: #fff;
+    }
+
+    .seperator {
+        padding: 3px;
+    }
+}
+
+/* Border */
+::host .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: white;
+  }
+  /* Font color */
+  input.mat-input-element {
+    color: white;
+  }

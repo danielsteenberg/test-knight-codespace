@@ -1,0 +1,7 @@
+<div class="project-portfolio-container">
+  <h2>{{projectItem.cat_name}}</h2>
+  <a routerLink="/projects">Back to All Projects</a>
+  <div class="portfolio-images">
+    <img *ngFor="let port of portfolio; let i = index" src="assets/projects/{{port}}" alt="{{projectItem.cat_description}}" [matTooltip]="getPortfolioDescription(projectItem, i)" (click)="openImage('assets/projects/' + port)">
+  </div>
+</div>
